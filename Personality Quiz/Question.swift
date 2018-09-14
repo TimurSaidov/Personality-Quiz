@@ -11,7 +11,7 @@ import Foundation
 struct Question {
     var text: String // Текст вопроса.
     var type: ResponseType // Тип вопроса.
-    var answer: [Answer] // Список ответов.
+    var answers: [Answer] // Список ответов.
 }
 
 enum ResponseType {
