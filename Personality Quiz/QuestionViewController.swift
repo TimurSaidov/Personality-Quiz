@@ -65,15 +65,42 @@ class QuestionViewController: UIViewController {
         
         navigationItem.title = "Question №\(questionIndex + 1)"
         
-        let currentQuestion = questions[questionIndex]
+        let currentQuestion = questions[questionIndex] // Текущий вопрос.
+        let currentAnswers = currentQuestion.answers // Массив ответов на текущий вопрос.
+        let totalProgress = Float(questionIndex) / Float(questions.count) // Прогресс на текущий момент.
         
         switch currentQuestion.type {
         case .single:
-            singleStackView.isHidden = false
+            updateSingleStack(using: currentAnswers)
         case .multiple:
-            multipleStackView.isHidden = false
+            updateMultipleStack(using: currentAnswers)
         case .ranged:
-            rangedStackView.isHidden = false
+            updateRangedStack(using: currentAnswers)
         }
+        
+        questionLabel.text = currentQuestion.text
+        progressView.setProgress(totalProgress, animated: true)
+    }
+    
+    func updateSingleStack(using answers: [Answer]) {
+        singleStackView.isHidden = false
+        singleButton1.setTitle(answers[0].text, for: UIControlState.normal)
+        singleButton2.setTitle(answers[1].text, for: UIControlState.normal)
+        singleButton3.setTitle(answers[2].text, for: UIControlState.normal)
+        singleButton4.setTitle(answers[3].text, for: UIControlState.normal)
+    }
+    
+    func updateMultipleStack(using answers: [Answer]) {
+        multipleStackView.isHidden = false
+        multipleLable1.text = answers[0].text
+        multipleLable2.text = answers[1].text
+        multipleLable3.text = answers[2].text
+        multipleLable4.text = answers[3].text
+    }
+    
+    func updateRangedStack(using answers: [Answer]) {
+        rangedStackView.isHidden = false
+        rangedLabel1.text = answers.first?.text // Первый элемент массива.
+        rangedLabel2.text = answers.last?.text // Последний элемент массива.
     }
 }
