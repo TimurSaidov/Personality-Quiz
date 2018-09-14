@@ -104,6 +104,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyQ-x3-0OP">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="idW-D1-lut" eventType="touchUpInside" id="kQS-G9-HXV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMo-K8-4bK">
                                         <rect key="frame" x="0.0" y="38" width="288" height="30"/>
@@ -181,6 +184,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5B-v1-D2X">
                                         <rect key="frame" x="0.0" y="156" width="288" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed:" destination="idW-D1-lut" eventType="touchUpInside" id="rUC-hm-lMZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -210,6 +216,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iko-oN-kz7">
                                         <rect key="frame" x="0.0" y="90.5" width="288" height="30"/>
                                         <state key="normal" title="Reply"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed:" destination="idW-D1-lut" eventType="touchUpInside" id="slZ-Le-7Lk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -244,10 +253,15 @@
                         <outlet property="multipleLable3" destination="h1S-0I-Hpf" id="PR2-xj-lC0"/>
                         <outlet property="multipleLable4" destination="c1E-JK-yv6" id="XxX-MQ-5v4"/>
                         <outlet property="multipleStackView" destination="b96-Me-BA4" id="Z3O-NV-gOL"/>
+                        <outlet property="multipleSwitch1" destination="adU-91-aoN" id="6aV-nB-l4i"/>
+                        <outlet property="multipleSwitch2" destination="6pU-s6-Wtu" id="UIg-c8-3ai"/>
+                        <outlet property="multipleSwitch3" destination="JjO-po-aOm" id="XNF-nk-rzz"/>
+                        <outlet property="multipleSwitch4" destination="FMI-bd-WkY" id="J7G-Nl-kGc"/>
                         <outlet property="progressView" destination="rQL-UT-gti" id="OhZ-U7-adi"/>
                         <outlet property="questionLabel" destination="lXk-Df-VEU" id="ipV-Ne-GV7"/>
                         <outlet property="rangedLabel1" destination="V4N-df-dzr" id="CrA-l3-hcH"/>
                         <outlet property="rangedLabel2" destination="vIA-tu-1nA" id="3wS-LM-hne"/>
+                        <outlet property="rangedSlider" destination="5eQ-v0-pgF" id="Xwf-Hf-5fL"/>
                         <outlet property="rangedStackView" destination="elA-Ig-3NA" id="Vf5-1l-S0P"/>
                         <outlet property="singleButton1" destination="iyQ-x3-0OP" id="RrX-QN-pyL"/>
                         <outlet property="singleButton2" destination="FMo-K8-4bK" id="UJL-Cp-Z95"/>
