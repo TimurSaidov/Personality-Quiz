@@ -175,4 +175,14 @@ class QuestionViewController: UIViewController {
             performSegue(withIdentifier: "resultsSegue", sender: nil)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "resultsSegue" {
+            guard let resultViewController = segue.destination as? ResultViewController else { return }
+            resultViewController.responses = chosenAnswers // Массив ответов на все вопросы.
+            questionIndex = 0
+            chosenAnswers = []
+            updateUI()
+        }
+    }
 }

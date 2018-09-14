@@ -192,7 +192,7 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5B-v1-D2X">
                                         <rect key="frame" x="0.0" y="156" width="288" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Reply"/>
                                         <connections>
                                             <action selector="multipleAnswerButtonPressed:" destination="idW-D1-lut" eventType="touchUpInside" id="rUC-hm-lMZ"/>
                                         </connections>
@@ -319,10 +319,19 @@
                         <viewLayoutGuide key="safeArea" id="Odi-29-e1h"/>
                     </view>
                     <navigationItem key="navigationItem" title="Result" id="1tt-i5-LmF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xDb-bD-e1O"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xDb-bD-e1O">
+                            <connections>
+                                <segue destination="tDY-4a-Xy9" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="0hr-LH-mXS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="Faa-Q0-9pZ" id="mga-6p-LdV"/>
+                        <outlet property="resultDefinitionLabel" destination="10o-lR-5HX" id="QWV-wz-4A1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad5-er-j9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tDY-4a-Xy9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2814" y="131"/>
         </scene>
