@@ -37,7 +37,7 @@ class ResultViewController: UIViewController {
 //
 //        let mostCommontAnswer = frequentAnswersSorted.first!.key
         
-        let mostCommonAnswer = frequencyOfAnswers.sorted { $0.1 > $1.1 }.first!.key // Сортировка словаря frequencyOfAnswers и запись первого элемента отсортированного словаря в константу let mostCommonAnswer: AnimalType.
+        let mostCommonAnswer = frequencyOfAnswers.sorted { $0.1 > $1.1 }.first!.key // Сортировка словаря по значению frequencyOfAnswers и запись первого элемента отсортированного словаря в константу let mostCommonAnswer: AnimalType.
         
         resultAnswerLabel.text = "You are \(mostCommonAnswer.rawValue)!"
         resultDefinitionLabel.text = mostCommonAnswer.definition
