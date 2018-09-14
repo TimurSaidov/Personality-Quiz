@@ -10,6 +10,10 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
+    @IBOutlet weak var singleStackView: UIStackView!
+    @IBOutlet weak var multipleStackView: UIStackView!
+    @IBOutlet weak var rangedStackView: UIStackView!
+    
     var questions: [Question] = [
         Question(text: "What kind of food do you like?", type: .single, answers: [
             Answer(text: "Steak", type: .dog),
@@ -26,7 +30,7 @@ class QuestionViewController: UIViewController {
         Question(text: "How much do you like car rides?", type: .ranged, answers: [
             Answer(text: "Hate it", type: .cat),
             Answer(text: "A little bit nervous", type: .rabbit),
-            Answer(text: "H ardly notice", type: .frog),
+            Answer(text: "Hardly notice", type: .frog),
             Answer(text: "Enjoy it", type: .dog)
             ])
     ]
@@ -39,6 +43,21 @@ class QuestionViewController: UIViewController {
     }
     
     func updateUI() {
+        singleStackView.isHidden = true
+        multipleStackView.isHidden = true
+        rangedStackView.isHidden = true
         
+        navigationItem.title = "Question №\(questionIndex + 1)"
+        
+        let currentQuestion = questions[questionIndex]
+        
+        switch currentQuestion.type {
+        case .single:
+            singleStackView.isHidden = false
+        case .multiple:
+            multipleStackView.isHidden = false
+        case .ranged:
+            rangedStackView.isHidden = false
+        }
     }
 }
