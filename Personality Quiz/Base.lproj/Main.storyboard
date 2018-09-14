@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -91,29 +92,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-Sv-jhn">
-                                <rect key="frame" x="16" y="159.5" width="288" height="168"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-Df-VEU">
+                                <rect key="frame" x="16" y="80" width="288" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-Sv-jhn">
+                                <rect key="frame" x="16" y="151.5" width="288" height="144"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyQ-x3-0OP">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMo-K8-4bK">
-                                        <rect key="frame" x="0.0" y="46" width="288" height="30"/>
+                                        <rect key="frame" x="0.0" y="38" width="288" height="30"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNU-pw-qaR">
-                                        <rect key="frame" x="0.0" y="92" width="288" height="30"/>
+                                        <rect key="frame" x="0.0" y="76" width="288" height="30"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rha-Lg-0yK">
-                                        <rect key="frame" x="0.0" y="138" width="288" height="30"/>
+                                        <rect key="frame" x="0.0" y="114" width="288" height="30"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="b96-Me-BA4">
-                                <rect key="frame" x="16" y="137.5" width="288" height="202"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b96-Me-BA4">
+                                <rect key="frame" x="16" y="131.5" width="288" height="186"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rV4-X2-eHD">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="31"/>
@@ -130,7 +137,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCI-Qw-Kpj">
-                                        <rect key="frame" x="0.0" y="43" width="288" height="31"/>
+                                        <rect key="frame" x="0.0" y="39" width="288" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eec-CB-cMc">
                                                 <rect key="frame" x="0.0" y="0.0" width="239" height="31"/>
@@ -144,7 +151,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktt-qA-Cus">
-                                        <rect key="frame" x="0.0" y="86" width="288" height="31"/>
+                                        <rect key="frame" x="0.0" y="78" width="288" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1S-0I-Hpf">
                                                 <rect key="frame" x="0.0" y="0.0" width="239" height="31"/>
@@ -158,7 +165,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4r-9U-DDL">
-                                        <rect key="frame" x="0.0" y="129" width="288" height="31"/>
+                                        <rect key="frame" x="0.0" y="117" width="288" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1E-JK-yv6">
                                                 <rect key="frame" x="0.0" y="0.0" width="239" height="31"/>
@@ -172,7 +179,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5B-v1-D2X">
-                                        <rect key="frame" x="0.0" y="172" width="288" height="30"/>
+                                        <rect key="frame" x="0.0" y="156" width="288" height="30"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
@@ -206,34 +213,46 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-Df-VEU">
-                                <rect key="frame" x="16" y="80" width="288" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rQL-UT-gti">
+                                <rect key="frame" x="32" y="550" width="256" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="b96-Me-BA4" firstAttribute="top" secondItem="lXk-Df-VEU" secondAttribute="bottom" constant="26" id="5yB-k6-MyP"/>
+                            <constraint firstItem="b96-Me-BA4" firstAttribute="top" secondItem="lXk-Df-VEU" secondAttribute="bottom" constant="20" id="5yB-k6-MyP"/>
                             <constraint firstItem="lXk-Df-VEU" firstAttribute="top" secondItem="5Gb-2g-5Tt" secondAttribute="top" constant="16" id="8bm-o3-ELB"/>
                             <constraint firstItem="Oa3-Sv-jhn" firstAttribute="leading" secondItem="5Gb-2g-5Tt" secondAttribute="leading" constant="16" id="Ab5-ze-Y9r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rQL-UT-gti" secondAttribute="trailing" constant="16" id="EfK-cf-Oaf"/>
                             <constraint firstItem="5Gb-2g-5Tt" firstAttribute="trailing" secondItem="elA-Ig-3NA" secondAttribute="trailing" constant="16" id="FEz-KU-PUt"/>
                             <constraint firstItem="5Gb-2g-5Tt" firstAttribute="trailing" secondItem="b96-Me-BA4" secondAttribute="trailing" constant="16" id="LjG-1b-TQv"/>
-                            <constraint firstItem="Oa3-Sv-jhn" firstAttribute="top" secondItem="lXk-Df-VEU" secondAttribute="bottom" constant="48" id="T1F-QR-e0h"/>
+                            <constraint firstItem="rQL-UT-gti" firstAttribute="leading" secondItem="qLO-8c-Uyc" secondAttribute="leadingMargin" constant="16" id="Rq1-Bi-Kb6"/>
+                            <constraint firstItem="Oa3-Sv-jhn" firstAttribute="top" secondItem="lXk-Df-VEU" secondAttribute="bottom" constant="40" id="T1F-QR-e0h"/>
                             <constraint firstItem="lXk-Df-VEU" firstAttribute="leading" secondItem="5Gb-2g-5Tt" secondAttribute="leading" constant="16" id="c2W-Ul-cbR"/>
                             <constraint firstItem="elA-Ig-3NA" firstAttribute="leading" secondItem="5Gb-2g-5Tt" secondAttribute="leading" constant="16" id="cml-0X-DrG"/>
                             <constraint firstItem="5Gb-2g-5Tt" firstAttribute="trailing" secondItem="lXk-Df-VEU" secondAttribute="trailing" constant="16" id="g7b-sP-aVe"/>
                             <constraint firstItem="5Gb-2g-5Tt" firstAttribute="trailing" secondItem="Oa3-Sv-jhn" secondAttribute="trailing" constant="16" id="nTw-hh-vSh"/>
                             <constraint firstItem="elA-Ig-3NA" firstAttribute="centerY" secondItem="qLO-8c-Uyc" secondAttribute="centerY" id="oAh-cu-Jkb"/>
                             <constraint firstItem="b96-Me-BA4" firstAttribute="leading" secondItem="5Gb-2g-5Tt" secondAttribute="leading" constant="16" id="pzX-Rf-Jnx"/>
+                            <constraint firstItem="5Gb-2g-5Tt" firstAttribute="bottom" secondItem="rQL-UT-gti" secondAttribute="bottom" constant="16" id="thH-9s-KQl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Gb-2g-5Tt"/>
                     </view>
                     <navigationItem key="navigationItem" id="tXB-jL-xqm"/>
                     <connections>
+                        <outlet property="multipleLable1" destination="jlG-nt-mG1" id="1U4-yY-ZcM"/>
+                        <outlet property="multipleLable2" destination="eec-CB-cMc" id="BPF-EF-v1K"/>
+                        <outlet property="multipleLable3" destination="h1S-0I-Hpf" id="PR2-xj-lC0"/>
+                        <outlet property="multipleLable4" destination="c1E-JK-yv6" id="XxX-MQ-5v4"/>
                         <outlet property="multipleStackView" destination="b96-Me-BA4" id="Z3O-NV-gOL"/>
+                        <outlet property="progressView" destination="rQL-UT-gti" id="OhZ-U7-adi"/>
+                        <outlet property="questionLabel" destination="lXk-Df-VEU" id="ipV-Ne-GV7"/>
+                        <outlet property="rangedLabel1" destination="V4N-df-dzr" id="CrA-l3-hcH"/>
+                        <outlet property="rangedLabel2" destination="vIA-tu-1nA" id="3wS-LM-hne"/>
                         <outlet property="rangedStackView" destination="elA-Ig-3NA" id="Vf5-1l-S0P"/>
+                        <outlet property="singleButton1" destination="iyQ-x3-0OP" id="RrX-QN-pyL"/>
+                        <outlet property="singleButton2" destination="FMo-K8-4bK" id="UJL-Cp-Z95"/>
+                        <outlet property="singleButton3" destination="WNU-pw-qaR" id="PL9-HY-YZj"/>
+                        <outlet property="singleButton4" destination="Rha-Lg-0yK" id="o7q-2c-eHB"/>
                         <outlet property="singleStackView" destination="Oa3-Sv-jhn" id="Xoe-Ou-XyX"/>
                         <segue destination="OxB-u4-qrq" kind="show" identifier="resultsSegue" id="9pv-qn-6Mg"/>
                     </connections>
