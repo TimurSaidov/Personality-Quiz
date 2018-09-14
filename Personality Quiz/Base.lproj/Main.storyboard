@@ -111,14 +111,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMo-K8-4bK">
                                         <rect key="frame" x="0.0" y="38" width="288" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="idW-D1-lut" eventType="touchUpInside" id="Hcb-vj-NbA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNU-pw-qaR">
                                         <rect key="frame" x="0.0" y="76" width="288" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="idW-D1-lut" eventType="touchUpInside" id="gHC-jj-VR4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rha-Lg-0yK">
                                         <rect key="frame" x="0.0" y="114" width="288" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="idW-D1-lut" eventType="touchUpInside" id="vVe-1x-Sm3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

@@ -76,9 +76,10 @@ class QuestionViewController: UIViewController {
     @IBAction func rangedAnswerButtonPressed(_ sender: UIButton) {
         let currentAnswers = questions[questionIndex].answers
         
-        let indexOfAnswerInSlider = Int(round(rangedSlider.value * Float(currentAnswers.count - 1)))
+        let indexOfAnswerInSlider = Int(round(rangedSlider.value * Float(currentAnswers.count - 1))) // currentAnswer.count - 1 потому, что кол-во элементов 4, а индекс элементов 0,1,2,3. То есть если слайдер [0...0.25] -> 0.25 * 3 = 0.75 -> элемент 0. Если слайдер [0.25...0.50] -> 0.5 * 3 = 1.5 -> элемент 1. Если слайдер [0.50...0.75] -> 0.75 * 3 = 2.25 -> элемент 2. Если слайдер [0.75...1] -> 1 * 3 = 3 -> элемент 3
+        print(indexOfAnswerInSlider)
         chosenAnswers.append(currentAnswers[indexOfAnswerInSlider])
-        
+    
         nextQuestion()
     }
     
@@ -103,7 +104,7 @@ class QuestionViewController: UIViewController {
             ])
     ]
     
-    var questionIndex: Int = 0
+    var questionIndex: Int = 0 
     
     var chosenAnswers: [Answer] = [] // Массив для выбранных(ого) ответов(ответа) на текущий вопрос.
 
@@ -147,6 +148,10 @@ class QuestionViewController: UIViewController {
     
     func updateMultipleStack(using answers: [Answer]) {
         multipleStackView.isHidden = false
+        multipleSwitch1.isOn = false
+        multipleSwitch2.isOn = false
+        multipleSwitch3.isOn = false
+        multipleSwitch4.isOn = false
         multipleLable1.text = answers[0].text
         multipleLable2.text = answers[1].text
         multipleLable3.text = answers[2].text
@@ -155,12 +160,19 @@ class QuestionViewController: UIViewController {
     
     func updateRangedStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
+        rangedSlider.setValue(0.5, animated: true)
         rangedLabel1.text = answers.first?.text // Первый элемент массива.
         rangedLabel2.text = answers.last?.text // Последний элемент массива.
     }
     
     // Функция для перехода на следующий вопрос.
     func nextQuestion() {
+        questionIndex += 1
         
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+            performSegue(withIdentifier: "resultsSegue", sender: nil)
+        }
     }
 }
